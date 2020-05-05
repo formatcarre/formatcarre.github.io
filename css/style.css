@@ -1,0 +1,113 @@
+body{
+	background-color:#292929;
+}
+.items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.items__inner {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 800px;
+    background: #292929;
+}
+a {
+    text-decoration: none;
+    color: #494638;
+}
+.items__layer .items__item {
+    position: absolute;
+    box-shadow: 0 32px 40px -20px rgba(0, 0, 0, 0.25);
+}
+.items__layer:nth-child(1) .items__item {
+    top: 200px;
+    left: 120px;
+    width: 340px;
+    height: 340px;
+    background: #ffe81f;
+}
+.items__layer .items__item:after {
+    content: attr(data-title);
+    position: absolute;
+    line-height: 20px;
+    font-size: 20px;
+	font-family:'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all .5s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+.items__layer:nth-child(1) .items__item:after {
+    top: -23px;
+    left: 0;
+    color: #3B545B;
+}
+a:hover {
+    border-bottom: 2px solid rgba(236,198,48,0.7);
+    line-height: inherit;
+    font-style: normal;
+}
+.items__layer .items__item:hover:after {
+    visibility: visible;
+    opacity: 1;
+}
+.items__layer:nth-child(2) .items__item {
+    top: 440px;
+    left: 400px;
+    width: 240px;
+    height: 200px;
+    background: #fff;
+}
+.items__layer:nth-child(2) .items__item:after {
+    bottom: -23px;
+    right: 0;
+    color: #5B2234;
+}
+.items__layer:nth-child(3) .items__item {
+    top: 400px;
+    left: 160px;
+    width: 300px;
+    height: 300px;
+    background: #000;
+}
+.items__layer:nth-child(3) .items__item:after {
+    bottom: -23px;
+    left: 0;
+    color: #78898E;
+}
+.items__layer:nth-child(4) .items__item {
+    top: 100px;
+    left: 400px;
+    width: 270px;
+    height: 480px;
+    background: #CCDBD6;
+}
+.items__layer:nth-child(4) .items__item:after {
+    top: -23px;
+    right: 0;
+    color: #9CA8A4;
+}
+.items__layer:nth-child(5) .items__item {
+    top: 300px;
+    left: 300px;
+    width: 200px;
+    height: 200px;
+	background-image: url("../img/logo_format_carre.jpg");
+}
+.items__layer:nth-child(5) .items__item:after {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    margin: auto;
+    text-align: center;
+    color: #A88D88;
+}
